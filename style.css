@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ccc;
+    color: #333;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .cube {
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(-15deg) rotateY(-15deg);
+    animation: spin 10s linear infinite;
+  }
+  
+  .cube .face {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    opacity: 0.8;
+    border: 2px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .cube .front {
+    transform: translateZ(150px);
+    background-color: #ff6666;
+  }
+  
+  .cube .back {
+    transform: rotateY(180deg) translateZ(150px);
+    background-color: #b3ffb3;
+  }
+  
+  .cube .right {
+    transform: rotateY(90deg) translateZ(150px);
+    background-color: #b3b3ff;
+  }
+  
+  .cube .left {
+    transform: rotateY(-90deg) translateZ(150px);
+    background-color: #ffff80;
+  }
+  
+  .cube .top {
+    transform: rotateX(90deg) translateZ(150px);
+    background-color: #ff80ff;
+  }
+  
+  .cube .bottom {
+    transform: rotateX(-90deg) translateZ(150px);
+    background-color: #80ffff;
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotateX(-15deg) rotateY(-15deg);
+    }
+    to {
+      transform: rotateX(345deg) rotateY(345deg);
+    }
+  }
+  
